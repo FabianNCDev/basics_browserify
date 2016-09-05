@@ -1,0 +1,26 @@
+{
+  "name": "basics_browserify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve":"beefy main.js --browserify -t caching-coffeeify --live",
+    "build":"browserify main.js --debug -t coffeeify -t -p [ minifyify --map bundle.js.map --output build/bundle.map.js ] > build/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "13.1.0",
+    "exorcist": "0.4.0",
+    "ramda": "0.22.1",
+    "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.8",
+    "caching-coffeeify": "0.5.1",
+    "coffeeify": "2.0.1",
+    "minifyify": "7.3.3"
+  }
+}
